@@ -5,6 +5,8 @@ aws-env-variables is a small utility package that gets environment variables fro
 This package will retrieve secrets from AWS and save them in a `.env` file
 
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/f701f47664a44534aca7232bf3247f45)](https://www.codacy.com/gh/leoncross/aws-env-variables/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=leoncross/aws-env-variables&amp;utm_campaign=Badge_Grade)
+[![npm version](https://badge.fury.io/js/aws-env-variables.svg)](https://badge.fury.io/js/aws-env-variables)
 
 ## Installation
 
@@ -89,6 +91,6 @@ Using pre-deployment scripts:
 
 ## Extending usage to better handle environment variables
 Using scripts and environment variables
-Extension of usage using  [node-config](https://www.npmjs.com/package/config) package:
+Extension of usage using the [config](https://www.npmjs.com/package/config) package:
 
-[Github | Leon Cross - example-async-env-config](https://github.com/leoncross/example-async-env-configs)
+[GitHub - demo-environment-variables](https://github.com/leoncross/demo-environment-variables)
