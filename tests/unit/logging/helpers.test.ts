@@ -1,4 +1,4 @@
-import * as helpers from '../helpers';
+import * as helpers from '../../../src/logging/helpers';
 
 describe('helpers', () => {
   let spyConsoleLog: jest.SpyInstance;
@@ -12,23 +12,15 @@ describe('helpers', () => {
   });
 
   describe('missingParameters', () => {
-    it('calls console.log with missing parameter', () => {
-      const missingParameter = 'missingParam';
+    it('calls console.log with missing parameters', () => {
+      const missingParameter1 = 'missingParam1';
+      const missingParameter2 = 'missingParam2';
 
-      helpers.missingParameters(missingParameter);
-
-      expect(spyConsoleLog).toHaveBeenCalledTimes(1);
-      expect(spyConsoleLog).toHaveBeenCalledWith(expect.stringContaining(missingParameter));
-    });
-    it('calls console.log with missing parameter and type', () => {
-      const missingParameter = 'missingParam';
-      const missingType = 'missingType';
-
-      helpers.missingParameters(missingParameter, missingType);
+      helpers.missingParameters(missingParameter1, missingParameter2);
 
       expect(spyConsoleLog).toHaveBeenCalledTimes(1);
-      expect(spyConsoleLog).toHaveBeenCalledWith(expect.stringMatching(missingParameter));
-      expect(spyConsoleLog).toHaveBeenCalledWith(expect.stringMatching(missingType));
+      expect(spyConsoleLog).toHaveBeenCalledWith(expect.stringContaining(missingParameter1));
+      expect(spyConsoleLog).toHaveBeenCalledWith(expect.stringContaining(missingParameter2));
     });
   });
 

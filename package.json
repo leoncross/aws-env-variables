@@ -1,20 +1,16 @@
 {
   "name": "aws-env-variables",
-  "description": "",
-  "keywords": [
-    "environment variables",
-    "aws environment variables",
-    "secrets manager",
-    "parameter store",
-    "deployment",
-    "aws",
-    ".env",
-    "dotenv"
-  ],
-  "author": "Leon Cross",
   "version": "1.0.0",
+  "description": "aws-env-variables is a lightweight utility package that retrieves secrets from AWS and stores them in a .env",
+  "license": "MIT",
+  "author": "Leon Cross",
+  "main": "build/index.js",
+  "bin": {
+    "aws-env-variables": "bin/aws-env-variables"
+  },
   "scripts": {
     "build": "tsc --build",
+    "lint": "./node_modules/.bin/eslint",
     "test": "./node_modules/.bin/jest --coverage"
   },
   "dependencies": {
@@ -22,20 +18,28 @@
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
-    "eslint": "^8.1.0",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
+    "eslint": "^8.1.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "nodemon": "^2.0.12",
     "ts-jest": "^27.0.4",
     "ts-node": "^10.1.0",
-    "tsc-watch": "^4.4.0",
     "typescript": "^4.5.5"
   },
-
-  "bin": {
-    "aws-env-variables": "bin/aws-env-variables"
-  }
+  "keywords": [
+    ".env",
+    "aws",
+    "aws environment variables",
+    "deployment",
+    "dotenv",
+    "environment variables",
+    "parameter store",
+    "secrets manager"
+  ],
+  "files": [
+    "build/index.js",
+    "build/src/**"
+  ]
 }

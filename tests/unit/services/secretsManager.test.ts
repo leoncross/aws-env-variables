@@ -1,10 +1,10 @@
 import AWS from 'aws-sdk';
-import secretsManager from '../secretsManager';
-import { AcceptedArguments } from '../../@types/arguments';
-import writeEnvFile from '../../utils/writeEnvFile';
+import secretsManager from '../../../src/services/secretsManager';
+import { AcceptedArguments } from '../../../src/@types/arguments';
+import writeEnvFile from '../../../src/utils/writeEnvFile';
 
 jest.mock('aws-sdk');
-jest.mock('../../utils/writeEnvFile');
+jest.mock('../../../src/utils/writeEnvFile');
 
 const mockAwsSecretsManager = AWS.SecretsManager as unknown as jest.Mock;
 const mockWriteEnvFile = writeEnvFile as jest.Mock;

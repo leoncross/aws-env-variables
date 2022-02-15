@@ -17,10 +17,12 @@
     "checkJs": false
   },
   "include": [
-    "./src"
+    "./index.ts",
+    "./src",
+    "./tests"
   ],
   "exclude": [
     "build",
-    "coverage",
+    "coverage"
   ]
 }

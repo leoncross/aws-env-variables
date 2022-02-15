@@ -1,12 +1,12 @@
 import { AcceptedArguments } from '../@types/arguments';
 
-const secretsManager = require('./secretsManager');
-const ssmParamStore = require('./ssmParamStore');
-const { missingParameters } = require('../logging/helpers');
+import secretsManager from './secretsManager';
+import ssmParamStore from './ssmParamStore';
+import { missingParameters } from '../logging/helpers';
 
 const getSecrets = async (options: AcceptedArguments) => {
-  if (!options.secretsManagerId || !options.paramStoreFileName) {
-    missingParameters('service');
+  if (!options.secretsManagerId && !options.paramStoreFileName) {
+    missingParameters('secretsManagerId', 'paramStoreFileName');
     return;
   }
 

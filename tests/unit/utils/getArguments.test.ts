@@ -1,7 +1,7 @@
-import getArguments from '../getArguments';
-import { unknownParameter } from '../../logging/helpers';
+import getArguments from '../../../src/utils/getArguments';
+import { unknownParameter } from '../../../src/logging/helpers';
 
-jest.mock('../../logging/helpers');
+jest.mock('../../../src/logging/helpers');
 
 const mockUnknownParameter = unknownParameter as jest.Mock;
 
@@ -14,9 +14,6 @@ describe('getArguments', () => {
     expect(res).toEqual({
       fileName: '.env',
       filePath: './',
-      secretId: undefined,
-      service: undefined,
-      ssmFile: undefined,
     });
   });
 

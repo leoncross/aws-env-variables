@@ -1,5 +1,5 @@
 import fs from 'fs';
-import writeEnvFile from '../writeEnvFile';
+import writeEnvFile from '../../../src/utils/writeEnvFile';
 
 jest.mock('fs');
 

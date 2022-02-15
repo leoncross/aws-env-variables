@@ -1,13 +1,13 @@
 import AWS from 'aws-sdk';
 import fs from 'fs';
-import ssmParamStore from '../ssmParamStore';
-import writeEnvFile from '../../utils/writeEnvFile';
-import { AcceptedArguments } from '../../@types/arguments';
+import ssmParamStore from '../../../src/services/ssmParamStore';
+import writeEnvFile from '../../../src/utils/writeEnvFile';
+import { AcceptedArguments } from '../../../src/@types/arguments';
 
 jest.mock('aws-sdk');
 jest.mock('fs');
-jest.mock('../../logging/helpers');
-jest.mock('../../utils/writeEnvFile');
+jest.mock('../../../src/logging/helpers');
+jest.mock('../../../src/utils/writeEnvFile');
 
 const mockAwsSsm = AWS.SSM as unknown as jest.Mock;
 const mockFsReadFileSync = fs.readFileSync as unknown as jest.Mock;
