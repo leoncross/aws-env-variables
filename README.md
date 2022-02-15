@@ -11,7 +11,7 @@ This package will retrieve secrets from AWS and save them in a `.env` file
 ## Installation
 
 ```
-npm install aws-env-variables --save-dev
+npm i aws-env-variables
 ```
 
 ## Prerequisite
