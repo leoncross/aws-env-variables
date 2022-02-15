@@ -1,6 +1,6 @@
 {
   "name": "aws-env-variables",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "aws-env-variables is a lightweight utility package that retrieves secrets from AWS and stores them in a .env",
   "license": "MIT",
   "author": "Leon Cross",

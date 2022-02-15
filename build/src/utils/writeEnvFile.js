@@ -5,7 +5,7 @@ const writeEnvFile = (filePath, fileName, secret) => {
     const dotEnvFormattedSecret = JSON.stringify(secret)
         .replace(/:/g, '=')
         .replace(/,/g, '\n')
-        .replace(/{|}|"/g, '');
+        .replace(/[{}"\\]/gm, '');
     fs.writeFile(filePath + fileName, dotEnvFormattedSecret, (err) => {
         if (err) {
             throw Error(err);
