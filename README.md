@@ -1,5 +1,7 @@
 # aws-env-variables
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/249a824f1d594f34aca1d60c4bec6841)](https://app.codacy.com/gh/leoncross/aws-env-variables?utm_source=github.com&utm_medium=referral&utm_content=leoncross/aws-env-variables&utm_campaign=Badge_Grade_Settings)
+
 aws-env-variables is a small utility package that gets environment variables from either AWS Secret Manager or AWS Parameter Store
 
 This package will retrieve secrets from AWS and save them in a `.env` file
