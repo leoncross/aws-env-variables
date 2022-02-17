@@ -11,6 +11,9 @@ const getSecrets = async (options) => {
         (0, helpers_1.missingParameters)('secretsManagerId', 'paramStoreFileName');
         return;
     }
+    if (options.loadConfig) {
+        process.env.AWS_SDK_LOAD_CONFIG = 'true';
+    }
     if (options.secretsManagerId) {
         await (0, secretsManager_1.default)(options);
         return;

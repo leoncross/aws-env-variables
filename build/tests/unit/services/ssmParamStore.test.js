@@ -25,6 +25,7 @@ describe('ssmParamStore', () => {
             fileName: '.env',
             secretsManagerId: undefined,
             paramStoreFileName: './params.json',
+            loadConfig: false,
         };
         mockGetParameter = jest.fn();
         mockAwsSsm.mockReturnValue({
@@ -38,6 +39,7 @@ describe('ssmParamStore', () => {
             fileName: '.env',
             secretsManagerId: undefined,
             paramStoreFileName: undefined,
+            loadConfig: false,
         };
         const res = await (0, ssmParamStore_1.default)(options);
         expect(res).toEqual(undefined);

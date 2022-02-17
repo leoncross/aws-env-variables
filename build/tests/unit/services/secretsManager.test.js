@@ -24,6 +24,7 @@ describe('secretsManager', () => {
             fileName: '.env',
             secretsManagerId: undefined,
             paramStoreFileName: undefined,
+            loadConfig: false,
         };
         const res = await (0, secretsManager_1.default)(options);
         expect(res).toEqual(undefined);
@@ -35,6 +36,7 @@ describe('secretsManager', () => {
             fileName: '.env',
             secretsManagerId: 'prod/calculatorService',
             paramStoreFileName: undefined,
+            loadConfig: false,
         };
         await (0, secretsManager_1.default)(options);
         expect(mockAwsSecretsManager).toHaveBeenCalledWith({
@@ -49,6 +51,7 @@ describe('secretsManager', () => {
             fileName: '.env',
             secretsManagerId: 'prod/calculatorService',
             paramStoreFileName: undefined,
+            loadConfig: false,
         };
         await (0, secretsManager_1.default)(options);
         expect(mockGetSecretValue).toHaveBeenCalledWith({ SecretId: options.secretsManagerId }, expect.any(Function));
@@ -59,6 +62,7 @@ describe('secretsManager', () => {
             fileName: '.env',
             secretsManagerId: 'prod/calculatorService',
             paramStoreFileName: undefined,
+            loadConfig: false,
         };
         const secrets = 'I am a secret';
         mockGetSecretValue.mockImplementation((params, callback) => {
@@ -73,6 +77,7 @@ describe('secretsManager', () => {
             fileName: '.env',
             secretsManagerId: 'prod/calculatorService',
             paramStoreFileName: undefined,
+            loadConfig: false,
         };
         const secret = 'I am a secret';
         mockGetSecretValue.mockImplementation((params, callback) => {
@@ -87,6 +92,7 @@ describe('secretsManager', () => {
             fileName: '.env',
             secretsManagerId: 'prod/calculatorService',
             paramStoreFileName: undefined,
+            loadConfig: false,
         };
         const error = new Error('I am an error');
         mockGetSecretValue.mockImplementation((params, callback) => {

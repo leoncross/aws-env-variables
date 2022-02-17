@@ -6,6 +6,7 @@ const defaultArguments = {
     fileName: ".env" /* fileName */,
     secretsManagerId: undefined,
     paramStoreFileName: undefined,
+    loadConfig: false,
 };
 const getArguments = () => {
     const passedArguments = process
