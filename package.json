@@ -12,7 +12,8 @@
   "scripts": {
     "build": "tsc --build",
     "lint": "./node_modules/.bin/eslint",
-    "test": "./node_modules/.bin/jest --coverage"
+    "test": "./node_modules/.bin/jest --coverage",
+    "publish": "npm run build && npm publish"
   },
   "dependencies": {
     "aws-sdk": "^2.1072.0"
