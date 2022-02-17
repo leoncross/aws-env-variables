@@ -14,12 +14,16 @@ describe('getArguments', () => {
     expect(res).toEqual({
       fileName: '.env',
       filePath: './',
+      loadConfig: false,
     });
   });
 
   it('updates arguments with flags passed', () => {
     const serviceManager = 'prod/service';
-    process.argv.push(`--secretsManagerId=${serviceManager}`);
+    process.argv.push(
+      `--secretsManagerId=${serviceManager}`,
+      '--loadConfig=true',
+    );
 
     const res = getArguments();
 
@@ -28,6 +32,7 @@ describe('getArguments', () => {
       filePath: './',
       paramStoreFileName: undefined,
       secretsManagerId: serviceManager,
+      loadConfig: 'true',
     });
   });
 
@@ -38,5 +43,9 @@ describe('getArguments', () => {
     getArguments();
 
     expect(mockUnknownParameter).toHaveBeenCalledWith(unknownFlag);
+  });
+
+  it('handles loadConfig', () => {
+
   });
 });

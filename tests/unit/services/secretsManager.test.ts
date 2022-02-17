@@ -26,6 +26,7 @@ describe('secretsManager', () => {
       fileName: '.env',
       secretsManagerId: undefined,
       paramStoreFileName: undefined,
+      loadConfig: false,
     };
 
     const res = await secretsManager(options);
@@ -40,6 +41,7 @@ describe('secretsManager', () => {
       fileName: '.env',
       secretsManagerId: 'prod/calculatorService',
       paramStoreFileName: undefined,
+      loadConfig: false,
     };
 
     await secretsManager(options);
@@ -57,6 +59,7 @@ describe('secretsManager', () => {
       fileName: '.env',
       secretsManagerId: 'prod/calculatorService',
       paramStoreFileName: undefined,
+      loadConfig: false,
     };
 
     await secretsManager(options);
@@ -73,6 +76,7 @@ describe('secretsManager', () => {
       fileName: '.env',
       secretsManagerId: 'prod/calculatorService',
       paramStoreFileName: undefined,
+      loadConfig: false,
     };
 
     const secrets = 'I am a secret';
@@ -96,6 +100,7 @@ describe('secretsManager', () => {
       fileName: '.env',
       secretsManagerId: 'prod/calculatorService',
       paramStoreFileName: undefined,
+      loadConfig: false,
     };
 
     const secret = 'I am a secret';
@@ -119,6 +124,7 @@ describe('secretsManager', () => {
       fileName: '.env',
       secretsManagerId: 'prod/calculatorService',
       paramStoreFileName: undefined,
+      loadConfig: false,
     };
 
     const error = new Error('I am an error');

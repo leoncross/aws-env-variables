@@ -10,6 +10,10 @@ const getSecrets = async (options: AcceptedArguments) => {
     return;
   }
 
+  if (options.loadConfig) {
+    process.env.AWS_SDK_LOAD_CONFIG = 'true';
+  }
+
   if (options.secretsManagerId) {
     await secretsManager(options);
     return;

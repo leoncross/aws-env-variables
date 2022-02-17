@@ -32,19 +32,22 @@ For more help with this, see the [AWS User guide](https://docs.aws.amazon.com/cl
 ```
 aws-env-variables
 
-Flag            Example
+Flag                    Example
 
 To customise the output path of the .env file. Defaults to project directory
---filePath       ./src
+--filePath              ./src
 
 To customise the filename of the .env file. Defaults to .env
---fileName       .env.test
+--fileName              .env.test
 
 to pass the Secret name of the secret stored in the Secret Manager
---secretsManagerId      prod/tamagotchi
+--secretsManagerId     prod/tamagotchi
 
 to pass the SSM Param Store file of all the secrets you with to request
---paramStoreFileName       prod/helloworld
+--paramStoreFileName   prod/helloworld
+
+to set process.env.AWS_SDK_LOAD_CONFIG as true
+--loadConfig            true
 ```
 
 ### Example of use

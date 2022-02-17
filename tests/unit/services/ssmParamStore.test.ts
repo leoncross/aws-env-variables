@@ -25,6 +25,7 @@ describe('ssmParamStore', () => {
       fileName: '.env',
       secretsManagerId: undefined,
       paramStoreFileName: './params.json',
+      loadConfig: false,
     };
 
     mockGetParameter = jest.fn();
@@ -42,6 +43,7 @@ describe('ssmParamStore', () => {
       fileName: '.env',
       secretsManagerId: undefined,
       paramStoreFileName: undefined,
+      loadConfig: false,
     };
 
     const res = await ssmParamStore(options);

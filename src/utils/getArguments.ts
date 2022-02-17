@@ -6,6 +6,7 @@ const defaultArguments: AcceptedArguments = {
   fileName: DefaultArguments.fileName,
   secretsManagerId: undefined,
   paramStoreFileName: undefined,
+  loadConfig: false,
 };
 
 const getArguments = () => {
